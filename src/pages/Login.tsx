@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BookOpen, GraduationCap, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -144,6 +144,21 @@ const Login = () => {
             By signing in, you agree to grant access to your Google Classroom
             data
           </p>
+          <div className="flex items-center justify-center gap-2 mt-3">
+            <Link 
+              to="/privacy" 
+              className="text-xs text-muted-foreground hover:text-foreground hover:underline transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link 
+              to="/terms" 
+              className="text-xs text-muted-foreground hover:text-foreground hover:underline transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </div>
