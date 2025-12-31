@@ -1,9 +1,10 @@
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BookOpen, GraduationCap, Loader2 } from "lucide-react";
+import { BookOpen, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { classroomService } from "@/services/classroomService";
+import logo from "@/assets/logo.png";
 
 const ADMIN_EMAILS = ['principal@school.edu', 'admin@school.edu', 'pulkit@mangosorange.com', 'mentor.ravi.db@gmail.com'];
 
@@ -75,11 +76,13 @@ const Login = () => {
         <div className="bg-card rounded-2xl shadow-card border border-border/50 p-8 backdrop-blur-sm">
           {/* Logo and Title */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent mb-4 shadow-glow">
-              <GraduationCap className="w-8 h-8 text-primary-foreground" />
-            </div>
+            <img 
+              src={logo} 
+              alt="SkillLMS Portal" 
+              className="w-24 h-24 mx-auto mb-4 object-contain"
+            />
             <h1 className="text-2xl font-bold text-foreground mb-2">
-              Classroom Portal
+              SkillLMS Portal
             </h1>
             <p className="text-muted-foreground text-sm">
               Connect with Google Classroom to access your courses
